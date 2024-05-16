@@ -1,0 +1,388 @@
+/* Reset CSS */
+* {
+  margin: auto;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+/*Body Css*/
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  /*background-color: #9f9f9f;*/
+  background-image: url("images/background.jpg");
+  background-size: cover; /* This will make the image cover the entire body */
+  background-repeat: no-repeat; /* This will prevent the image from repeating */
+}
+
+header-container {
+  margin: auto;
+  padding: 8px;
+}
+.header-container {
+  display: flex;
+  margin: auto;
+  padding: 3px;
+  align-items: center; /* Centers items vertically */
+  justify-content: space-between; /* Aligns items to the start and end of the container */
+  align-items: center; /* Centers items vertically */
+}
+
+header {
+  /*background-color: #333;*/
+  color: #fff;
+  padding: 1px;
+  border-radius: 5px;
+  /*backdrop-filter:blur(20px);*/
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.817);
+}
+header h2 {
+  display: flex;
+  text-align: center; /* Centers the text horizontally */
+  font-size: 40px; /* Adjust font size as needed */
+  font-family: Arial, sans-serif; /* Change font family as needed */
+}
+header h1 {
+  display: flex;
+  margin: 0; /* Remove default margin */
+  justify-content: flex-start; /* Aligns the logo to the start */
+}
+
+header h1 img {
+  width: 102px;
+  height: 75px; /* Maintain aspect ratio */
+  transition: 0.3s ease;
+  margin-bottom: 3px;
+  transition: 0.3s ease;
+}
+
+header h1 img:hover {
+  transform: scale(1.1); /* Enlarge size on hover */
+}
+
+/*display tittle font and other properties*/
+.displayTitle {
+  /*background-color: #f0f0f0; /* Background color */
+  backdrop-filter: blur(5px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.817);
+  padding: 1px; /* Padding around the content */
+  text-align: center; /* Align text to the left */
+}
+
+.displayTitle a {
+  color: #333; /* Link color */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 25px; /* Increased font size */
+  font-family: Arial, sans-serif; /* Font family */
+  color: #000000; /* Link color */
+}
+
+.displayTitle a:hover {
+  color: #2b2b2b56;
+}
+
+.displayTitle p {
+  color: #050505;
+}
+
+/* Menu navigation CSS*/
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(10px);
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.8s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s ease;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f156;
+  transform: scale(1.3);
+}
+
+/* Styling for the menu icon */
+.menu-icon {
+  cursor: pointer;
+  font-size: 45px;
+  color: #ffffff;
+  margin-bottom: 1px;
+  margin-top: 1px; /* Adjust as needed */
+  margin-left: 10px;
+  transition: 0.3s ease;
+  justify-content: flex-start;
+  display: flex;
+}
+
+/* Hover effect */
+.menu-icon:hover {
+  color: #f1f1f1; /* Change to desired hover color */
+  transform: scale(1.3); /* Enlarge size on hover */
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left 0.5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+/* Slider CSS*/
+.slider-wrapper {
+  /*margin: 1rem;*/ /*margin control*/
+  position: relative;
+  overflow: visible;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.slides-container {
+  height: calc(100vh - 2rem);
+  width: 100%;
+  display: flex;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0 24px;
+  border-radius: 10px;
+}
+
+.slide-arrow {
+  position: absolute;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 4rem;
+  background-color: white;
+  border: none;
+  width: 2rem;
+  font-size: 3rem;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 100ms;
+}
+
+.slide-arrow:hover,
+.slide-arrow:focus {
+  opacity: 1;
+  transform: scale(1.2);
+}
+.slides-container {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+/* WebKit */
+.slides-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+#slide-arrow-prev {
+  left: 0;
+  padding-left: 0.25rem;
+  border-radius: 0 2rem 2rem 0;
+}
+
+#slide-arrow-next {
+  right: 0;
+  padding-left: 0.75rem;
+  border-radius: 2rem 0 0 2rem;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  flex: 1 0 100%;
+  overflow: hidden; /*ensures the image is fixed within its frame */
+}
+
+.slide img {
+  width: 100%; /* Ensures the image fills its container */
+  height: 100%; /* Ensures the image fills its container */
+  object-fit: cover; /* Maintains aspect ratio while filling the container */
+  transition: 0.3s ease;
+  scroll-snap-align: start;
+}
+
+/* Additional styles */
+/* Mobile styles */
+@media (max-width: 768px) {
+  .slider-wrapper {
+    margin: 10px;
+  }
+
+  .slides-container {
+    height: calc(100vh - 100px);
+  }
+}
+
+/* Footer CSS */
+footer {
+  /*background-color: #4d4a4a;*/
+  color: #fff;
+  padding: 12px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.817);
+  border-radius: 10px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.footer-container {
+  display: flex;
+  margin-bottom: -20px;
+  flex-wrap: wrap; /* Allows items to wrap to the next line if there's not enough space */
+  justify-content: space-between; /* Distributes items evenly along the main axis */
+  align-items: center; /* Centers items vertically */
+}
+
+.Fcontainer {
+  display: flex;
+  align-items: left;
+  height: 50px;
+}
+
+.Fcontainer img {
+  width: 25px; /* Adjust the width to match the text size */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 5px; /* Adjust spacing between image and text */
+  transition: 0.3s ease;
+  margin-top: -2px;
+}
+
+.Fcontainer img:hover {
+  transform: scale(1.5);
+  color: #4e4e4e;
+}
+
+.Fcontainer p {
+  margin: 0;
+}
+.social-icons {
+  align-items: right;
+  margin-top: -57px;
+  font-size: 25px;
+}
+
+.fab {
+  padding: 10px;
+  width: 30px;
+  text-decoration: none;
+}
+
+.fab:hover {
+  opacity: 0.7;
+  transform: scale(1.3);
+}
+* {
+  box-sizing: border-box;
+}
+/* Add a blue text color to links */
+a {
+  color: rgb(237, 239, 241);
+}
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+/* Feedback form container */
+.feedback-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  /*background-color: #f9f9f9;*/
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.817);
+}
+
+.feedback-form-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Form input and label styles */
+.feedback-form-container label {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.feedback-form-container input[type="text"],
+.feedback-form-container input[type="email"],
+.feedback-form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+.feedback-form-container input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #6bacf3;
+  color: #141414;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.feedback-form-container input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive styles for form */
+@media only screen and (max-width: 600px) {
+  .feedback-form-container {
+    padding: 10px;
+  }
+
+  .feedback-form-container input[type="text"],
+  .feedback-form-container input[type="email"],
+  .feedback-form-container textarea {
+    margin-bottom: 10px;
+  }
+}
